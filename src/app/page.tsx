@@ -32,16 +32,19 @@ export default function Home() {
     );
 
     setQuotes(filtered.slice(0, 3));
-    setError(""); // clear error if input is valid
+    setError(""); 
   };
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-background to-card px-4 py-10">
-      <div className="bg-card border border-border rounded-2xl shadow-xl w-full max-w-xl p-8 space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-        <h1 className="text-4xl font-bold text-center text-purple-500">
+      <div className="bg-card border border-border rounded-2xl shadow-xl w-full max-w-3xl p-10 space-y-8 ...">
+
+        <h1 className="text-4xl font-bold text-center text-black>
    Quote Generator
 </h1>
-
+<h2 className="text-lg font-medium text-center text-muted-foreground">
+  GET HANDPICKED QUOTES BY TOPIC
+</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Input
   placeholder="Try topics like life, success, or motivation"
