@@ -25,7 +25,7 @@ This is a simple and beautiful motivational quote generator built with **Next.js
 
 ## 🌐 Live Demo
 
-🔗 [View on Vercel](https://nexium-assignment-1-kappa.vercel.app/p)
+🔗 [View on Vercel](https://nexium-assignment-1-kappa.vercel.app)
 
 ---
 
