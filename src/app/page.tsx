@@ -46,15 +46,17 @@ export default function Home() {
   GET HANDPICKED QUOTES BY TOPIC
 </h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Input
-  placeholder="Try topics like life, success, or motivation"
+          <select
   value={topic}
   onChange={(e) => setTopic(e.target.value)}
-  onKeyDown={(e) => {
-    if (e.key === "Enter") handleGenerate();
-  }}
-  className="flex-1"
-/>
+  className="flex-1 px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-ring text-sm bg-white dark:bg-background dark:text-foreground"
+>
+  <option value="">Select a topic</option>
+  <option value="life">Life</option>
+  <option value="success">Success</option>
+  <option value="motivation">Motivation</option>
+</select>
+
 
      <Button
   onClick={handleGenerate}
