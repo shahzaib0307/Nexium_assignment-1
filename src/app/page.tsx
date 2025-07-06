@@ -37,9 +37,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-background to-card px-4 py-10">
-      <div className="bg-card border border-border rounded-2xl shadow-xl w-full max-w-3xl p-10 space-y-8 ...">
+      <div className="bg-card border border-border rounded-2xl shadow-xl w-full max-w-3xl p-10 space-y-8">
 
-        <h1 className="text-4xl font-bold text-center text-black>
+        <h1 className="text-4xl font-bold text-center text-black">
    Quote Generator
 </h1>
 <h2 className="text-lg font-medium text-center text-muted-foreground">
