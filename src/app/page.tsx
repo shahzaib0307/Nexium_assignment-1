@@ -53,12 +53,15 @@ export default function Home() {
   className="flex-1"
 />
 
-          <Button
+     <Button
   onClick={handleGenerate}
-  className="w-full sm:w-auto whitespace-nowrap cursor-pointer"
+  className="w-full sm:w-auto whitespace-nowrap !bg-black !text-white hover:!bg-pink-600 cursor-pointer transition-colors duration-300"
 >
-  Generate!
+  Generate
 </Button>
+
+
+
 
         </div>
 
