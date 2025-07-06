@@ -55,10 +55,12 @@ export default function Home() {
 
      <Button
   onClick={handleGenerate}
-  className="w-full sm:w-auto whitespace-nowrap !bg-black !text-white hover:!bg-pink-600 cursor-pointer transition-colors duration-300"
+  variant="ghost"
+  className="w-full sm:w-auto whitespace-nowrap bg-black text-white hover:bg-pink-600 hover:text-white cursor-pointer transition-colors duration-300"
 >
   Generate
 </Button>
+
 
 
 
