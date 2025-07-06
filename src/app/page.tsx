@@ -38,9 +38,9 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-background to-card px-4 py-10">
       <div className="bg-card border border-border rounded-2xl shadow-xl w-full max-w-xl p-8 space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-        <h1 className="text-4xl font-bold text-primary text-center">
-          ✨ Motivational Quote Generator
-        </h1>
+        <h1 className="text-4xl font-bold text-center text-pink-600">
+  ✨ Motivational Quote Generator
+</h1>
 
         <div className="flex flex-col sm:flex-row gap-3">
           <Input
@@ -54,11 +54,12 @@ export default function Home() {
 />
 
           <Button
-            onClick={handleGenerate}
-            className="w-full sm:w-auto whitespace-nowrap"
-          >
-            Generate
-          </Button>
+  onClick={handleGenerate}
+  className="w-full sm:w-auto whitespace-nowrap cursor-pointer"
+>
+  Generate!
+</Button>
+
         </div>
 
         {error && (
