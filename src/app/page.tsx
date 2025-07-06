@@ -44,11 +44,15 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-3">
           <Input
-            placeholder="Try topics like life, success, or motivation"
-            value={topic}
-            onChange={(e) => setTopic(e.target.value)}
-            className="flex-1"
-          />
+  placeholder="Try topics like life, success, or motivation"
+  value={topic}
+  onChange={(e) => setTopic(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === "Enter") handleGenerate();
+  }}
+  className="flex-1"
+/>
+
           <Button
             onClick={handleGenerate}
             className="w-full sm:w-auto whitespace-nowrap"
