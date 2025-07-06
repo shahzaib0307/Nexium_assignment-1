@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-background to-card px-4 py-10">
       <div className="bg-card border border-border rounded-2xl shadow-xl w-full max-w-xl p-8 space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-        <h1 className="text-4xl font-bold text-center text-pink-600">
+        <h1 className="text-4xl font-bold text-center text-blue-600">
   ✨ Motivational Quote Generator
 </h1>
 
