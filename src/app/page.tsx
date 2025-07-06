@@ -14,12 +14,25 @@ type Quote = {
 export default function Home() {
   const [topic, setTopic] = useState("");
   const [quotes, setQuotes] = useState<Quote[]>([]);
+  const [error, setError] = useState("");
+
+  const allowedTopics = ["life", "success", "motivation"];
 
   const handleGenerate = () => {
+    const normalized = topic.trim().toLowerCase();
+
+    if (!allowedTopics.includes(normalized)) {
+      setQuotes([]);
+      setError(" Please enter from 'life', 'success', or 'motivation' .");
+      return;
+    }
+
     const filtered = quotesData.filter(
-      (q: Quote) => q.topic.toLowerCase() === topic.toLowerCase()
+      (q: Quote) => q.topic.toLowerCase() === normalized
     );
+
     setQuotes(filtered.slice(0, 3));
+    setError(""); // clear error if input is valid
   };
 
   return (
@@ -43,6 +56,12 @@ export default function Home() {
             Generate
           </Button>
         </div>
+
+        {error && (
+          <p className="text-red-500 text-sm font-medium text-center">
+            {error}
+          </p>
+        )}
 
         {quotes.length > 0 && (
           <div className="space-y-4 pt-4 border-t border-border">
