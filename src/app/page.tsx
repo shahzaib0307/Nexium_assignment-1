@@ -82,12 +82,22 @@ export default function Home() {
         )}
 
         {quotes.length > 0 && (
-          <div className="space-y-4 pt-4 border-t border-border">
-            {quotes.map((q, idx) => (
-              <QuoteCard key={idx} quote={q.quote} />
-            ))}
-          </div>
-        )}
+  <div className="space-y-4 pt-4 border-t border-border">
+    {quotes.map((q, idx) => (
+      <div
+        key={idx}
+        style={{
+          opacity: 0,
+          animation: "fadeIn 0.6s ease-out forwards",
+          animationDelay: `${idx * 0.3}s`,
+        }}
+      >
+        <QuoteCard quote={q.quote} />
+      </div>
+    ))}
+  </div>
+)}
+
       </div>
     </main>
   );
