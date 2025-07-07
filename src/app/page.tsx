@@ -15,6 +15,7 @@ export default function Home() {
   const [topic, setTopic] = useState("");
   const [quotes, setQuotes] = useState<Quote[]>([]);
   const [error, setError] = useState("");
+const [animationKey, setAnimationKey] = useState(0);
 
   const allowedTopics = ["life", "success", "motivation"];
 
@@ -23,6 +24,7 @@ export default function Home() {
 
     if (!allowedTopics.includes(normalized)) {
       setQuotes([]);
+      
       setError(" Please enter from 'life', 'success', or 'motivation' .");
       return;
     }
@@ -33,6 +35,7 @@ export default function Home() {
 
     setQuotes(filtered.slice(0, 3));
     setError(""); 
+    setAnimationKey(prev => prev + 1);
   };
 
   return (
@@ -85,7 +88,8 @@ export default function Home() {
   <div className="space-y-4 pt-4 border-t border-border">
     {quotes.map((q, idx) => (
       <div
-        key={idx}
+      key={`${animationKey}-${idx}`}
+
         style={{
           opacity: 0,
           animation: "fadeIn 0.6s ease-out forwards",
@@ -97,6 +101,7 @@ export default function Home() {
     ))}
   </div>
 )}
+
 
       </div>
     </main>
